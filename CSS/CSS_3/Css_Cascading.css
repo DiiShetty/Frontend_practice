@@ -1,0 +1,28 @@
+h1{
+    background-color: aqua !important;
+}
+ #h11{
+    background-color: rgb(200, 200, 29);
+}
+.h31c{
+    background-color: brown;
+}
+h3{
+    background-color: aqua;
+}
+#h31{
+    background-color: rgb(206, 78, 138);
+} 
+
+/*ID HAS THE HIGHEST PRIORITY in here(IN EXTERNAL CSS)
+    
+
+	PRIORITY
+    •!important
+	• INLINE CSS
+	• ID
+	• CLASS
+	• TAG (h1,h2) (ordering also matters here)
+	• ORDER
+
+*/

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Complex form</h2>
+    <form>
+        <fieldset>
+            <legend>Personal information</legend>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone"><br>
+            <label for="date">Date of Birth:</label>
+            <input type="datetime" name="date" id="date">
+
+            <span>Gender:</span>
+            
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+<br>
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="op1">India</option>
+                <option value="op2">USA</option>
+                <option value="op3">UK</option>
+                <option value="op4">UAE</option>
+                <option value="op5">other</option>
+            </select>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Address</legend>
+            <label for="street">Street</label>
+            <input type="text" name="street" id="street">
+            <label for="city">City</label>
+            <input type="text" name="city" id="city">
+            <label for="state">State</label>
+            <input type="text" name="state" id="state"><br>
+            <label for="zip">Zip code</label>
+            <input type="text" name="zip" id="zip">
+        </fieldset>
+
+        <fieldset>
+            <legend>Other information</legend>
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" cols="40" rows="7"></textarea>
+            <label for="agree">I agree to the terms of service</label>
+            <input type="checkbox" name="agree" id="agree">
+
+        </fieldset>
+       
+        <input type="button" value="submit">
+    </form>
+</body>
+</html>

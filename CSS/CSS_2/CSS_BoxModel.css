@@ -1,0 +1,44 @@
+h1{
+    background-color: blue;
+    height: 200px;
+    width: 300px;
+                        /*BORDER*/
+    border-width: 15px;
+    border-style: dotted;
+    border-color: yellow;
+
+}
+            /*SHORT FORM*/
+            /*ORDER CAN BE CHANGED*/
+h2{
+    border: 10px solid green;
+    padding: 5px;       /*TEXT TO NOT STICK TO THE BORDER*/
+}
+#h22{
+    background-color: aqua;
+    border: solid 5px purple;
+    margin: 30px;   /*DISTANCE FROM MARGIN*/
+}
+
+                /*STANDARD WAY*/
+#h11{
+    background-color: aqua;
+     width: 200px;
+     padding: 50px 10x 20x 30x;  /* top right bottom left*/
+     border: 15px solid green;
+     margin: 20px;
+     border-radius: 50px; /*curves the edges*/
+}
+.p1{
+    background-color:chartreuse;
+    padding: 6px;
+    border: solid 5px rgb(128, 0, 15);
+
+}
+#h21{
+    border-top: 10px solid red;
+    border-bottom: 10px solid red;
+}
+#s1{
+    color: blue;
+}

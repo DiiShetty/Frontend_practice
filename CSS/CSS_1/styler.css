@@ -1,0 +1,56 @@
+    /*selecting based on tags*/
+/* h1{
+    background-color: pink;
+}
+ol{
+    background-color: aquamarine;
+    font-size: larger;
+} */
+
+
+    /*SELECTING BASED ON ID*/
+/* #ul1{
+    background-color: blue;
+} 
+#h32{
+    background-color: brown;
+}    */
+
+
+    /*CLASS BASED SELECTION*/
+/* .sec{
+    background-color: burlywood;
+}     */
+
+
+    /*GROUP BASED SELECTION*/
+h3, .sec{
+    background-color: #f4c1c1;
+}   
+
+h1 {
+    background-color: hsl(110, 46%, 72%);
+    font-size: 40px;
+        font-family: cursive;
+        font-weight: 600;
+        font-style: italic;
+
+}
+
+/* EM UNIT */
+    /* ul{
+        font-size: 10px;
+    }
+    li{
+        font-size: 2em;
+    } */
+
+
+ ul{
+        font-size: 10px;
+    }
+    li{
+        font-size: 2vw;
+    }
+
+

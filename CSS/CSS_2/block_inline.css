@@ -1,0 +1,52 @@
+span{
+    color: red; /*only takes specified space*/
+    /* background-color: darkmagenta;
+    padding-bottom: 70px;
+    margin-top: 30px;
+    padding-left: 50px; */
+
+
+        /*COMMENT OUT ONE BY ONE AND CHECK ALL THE DIFFERENCE*/
+        /* An inline element cannot be pushed up or down. */
+        /*BGC OVERLAPS WITH THE OTHERS*/
+        
+
+}
+h3{
+    color: aqua;    /*takes the whole line*/
+    padding: 20px;
+    display: inline;    /*converts block level to inline*/
+}
+
+/*universal selector apllies on all*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h2{
+    background-color: cadetblue;
+    padding: 30px;
+    display: inline-block;   /*COMMENT THIS OUT & CHECK*/
+                                   /*HERE ITS ACTS AS BOTH BLOCK AND INLINE LEVEL ELEMENT*/
+
+}
+
+#ho{
+    background-color: aqua;
+    height: 50px;
+    width: 70px;
+    border: 10px;
+    padding: 20px;
+    box-sizing: border-box; /*content_width + everything*/
+
+}
+
+#hi{
+    background-color: yellow;
+    height: 50px;
+    width: 70px;
+    border: 10px;
+    padding: 20px;
+    box-sizing: content-box;    /*conetnt_width*/
+}

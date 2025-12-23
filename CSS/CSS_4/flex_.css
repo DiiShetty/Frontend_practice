@@ -1,0 +1,75 @@
+.container{
+    background-color: aqua;
+    height: 600px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+     /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */ 
+
+
+     justify-content: center;
+   /* justify-content: end;
+    justify-content: start;
+    justify-content: space-around;
+    /* justify-content: space-between; */ 
+    /* justify-content: space-evenly; */
+
+                    /*try all of these*/
+                /*justify content mainly works around the main axis*/  
+  
+                
+    align-items: center;  
+    /* align-items: end;
+    align-items: start; */
+                    /*align item works around the cross axis*/
+
+
+    /* flex-wrap: wrap; */
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap-reverse; */
+                    /*open and inspection chcek the changes in responsive*/
+    
+     gap: 15px;
+
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    /* margin: 5px; */
+}
+.first{
+    background-color: pink;
+    /* flex-grow: 1; */
+    /* flex-shrink: 4; */   
+                        /*check flex shrink with inspect*/
+    flex-basis: 200px;      
+                        /*changes height and width w.r.t MAIN AXIS
+                        overrides the main axis*/ 
+                        /*row-->width , col-->height*/           
+}
+.second{
+    background-color: blue;
+    /* flex-grow: 2; */
+    /* flex-shrink: 6; */
+}
+.third{
+    background-color: green;
+    /* flex-grow: 3; */
+    align-self: flex-start;
+    align-self: flex-end;
+}
+.fourth{
+    background-color: crimson;
+    /* flex-grow: 4; */
+}
+
+
+
+
+
+
+
+
+

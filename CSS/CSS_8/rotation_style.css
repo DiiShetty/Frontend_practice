@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: cornflowerblue;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+
+ animation-name: rotation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    
+}
+
+
+   
+
+
+/* @keyframes rotation {
+    from{
+        transform: rotate(0deg) translateX(200px);
+    }
+    to{
+        transform: rotate(360deg) translateX(200px);
+    }
+} */
+
+        /*TRY BOTH*/
+
+/* @keyframes rotation {
+    from{
+        transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+} */
+
+        /*METHOD 2*/
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+       
+.sun{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(150px);
+   
+}        
+
