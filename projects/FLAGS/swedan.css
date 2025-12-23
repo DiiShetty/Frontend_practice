@@ -1,0 +1,32 @@
+#container{
+    background-color: yellow;
+    height: 200px;
+    width: 400px;
+    position: relative;
+}
+#first,#third{
+    /* box-sizing: border-box; */
+    background-color: blue;
+    height: 80px;
+    width: 130px;
+}
+#third{
+    position: absolute;
+    bottom: 0px;
+}
+#second, #fourth{
+    background-color: blue;
+    height: 80px;
+    width: 220px;
+     position: absolute; 
+}
+#second{
+    left: 180px;
+    top: 0px;
+    
+}
+#fourth{
+    left: 180px;
+    bottom: 0px;
+
+}
