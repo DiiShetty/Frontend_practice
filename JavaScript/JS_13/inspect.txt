@@ -1,0 +1,88 @@
+const temp = window.document.getElementById("first");
+undefined
+
+temp
+<h1 id=​"first" style=​"background-color:​ aqua;​">​Hello​</h1>​
+
+console.dir(temp);
+    h1#firstaccessKey: ""align: ""ariaActiveDescendantElement: nullariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColIndexText: nullariaColSpan: nullariaControlsElements: nullariaCurrent: nullariaDescribedByElements: nullariaDescription: nullariaDetailsElements: nullariaDisabled: nullariaErrorMessageElements: nullariaExpanded: nullariaFlowToElements: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLabelledByElements: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowIndexText: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 1}attributes: NamedNodeMap {0: id, 1: style, id: id, style: style, length: 2}autocapitalize: ""autofocus: falsebaseURI: "http://127.0.0.1:5500/JavaScript/JS_13/index.html"childElementCount: 0childNodes: NodeList [text]children: HTMLCollection []classList: DOMTokenList [value: '']className: ""clientHeight: 38clientLeft: 0clientTop: 0clientWidth: 158contentEditable: "inherit"currentCSSZoom: 1dataset: DOMStringMap {}dir: ""draggable: falseeditContext: nullelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: nullhidden: falseid: "first"inert: falseinnerHTML: "Hello"innerText: "Hello"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: nulllocalName: "h1"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: h2nextSibling: textnodeName: "H1"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 38offsetLeft: 8offsetParent: bodyoffsetTop: 21offsetWidth: 158onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforetoggle: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncommand: nulloncontentvisibilityautostatechange: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonscrollend: nullonscrollsnapchange: nullonscrollsnapchanging: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<h1 id=\"first\" style=\"background-color: aqua;\">Hello</h1>"outerText: "Hello"ownerDocument: documentparentElement: bodyparentNode: bodypart: DOMTokenList [value: '']popover: nullprefix: nullpreviousElementSibling: nullpreviousSibling: textrole: nullscrollHeight: 38scrollLeft: 0scrollTop: 0scrollWidth: 158shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {0: 'background-color', accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "H1"textContent: "Hello"title: ""translate: truevirtualKeyboardPolicy: ""writingSuggestions: "true"[[Prototype]]: HTMLHeadingElement
+    undefined
+
+typeof temp
+    'object'
+
+temp.textContent = "hiiii"
+    'hiiii'
+
+temp.style.backgroundColor = "pink"
+    'pink'
+
+
+
+
+"The DOM (Document Object Model) is a tree-like representation of your HTML document that JavaScript can understand and manipulate.
+
+
+### **Your HTML:**
+
+
+<html>
+  <head>
+    <title>My Site</title>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>Hello there!</p>
+  </body>
+</html>
+
+
+
+
+
+### **Browser Creates This Tree:**
+
+document
+└── html
+    ├── head
+    │   └── title
+    │       └── "My Site"
+    └── body
+        ├── h1
+        │   └── "Welcome"
+        └── p
+            └── "Hello there!"
+
+
+
+
+
+
+
+# # HTML Elements Become Objects
+
+<h1 id="title">Hello</h1>
+ 
+ ==>
+
+{
+  tagName: "H1",
+  id: "title",
+  textContent: "Hello",
+  style: { color: "", fontSize: "" },
+  parentElement: body,
+  children: [],
+  // ... many more properties and methods
+}
+
+
+
+Window (global object - the browser API)
+    └── document (your HTML page as objects)
+        └── documentElement (the <html> tag)
+            ├── head
+            └── body
+                └── (all your elements)
+
+- `window` = The browser environment (has alert, setTimeout, localStorage, etc.)
+- `document` = Your HTML page (the DOM tree)

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Selection</title>
+</head>
+<body>
+
+  <div id="main-container" class="container">
+    <h1 class="title">Main Title</h1>
+    <p>This is the first paragraph.</p>
+    <p class="content">This is the second paragraph with a class.</p>
+
+    <ul id="item-list">
+      <li class="item">Item 1</li>
+      <li class="item special">Item 2</li>
+      <li class="item">Item 3</li>
+    </ul>
+
+    <form name="login-form">
+      <input type="text" name="username">
+    </form>
+  </div>
+
+  <div class="container footer">
+    <p>Footer content.</p>
+  </div>
+
+</body>
+</html>
+
+
+
+                <!-- INSPECT
+        1] document.getElementById('id')
+
+const mainContainer = document.getElementById('main-container');
+mainContainer.style.border = '2px solid red'; // Puts a red border around the main div
+
+const itemList = document.getElementById('item-list');
+console.log(itemList);
+
+
+
+        2] document.getElementsByTagName('tagName')        
+
+const allParagraphs = document.getElementsByTagName('p');
+console.log(allParagraphs.length); // 3
+
+// You can loop through the collection
+for (let i = 0; i < allParagraphs.length; i++) {
+  allParagraphs[i].style.fontStyle = 'italic';
+}
+
+
+        3] document.getElementsByClassName('className')
+
+        const allItems = document.getElementsByClassName('item');
+console.log(allItems.length); // 3
+
+// You can also get elements with multiple classes
+const footerContainer = document.getElementsByClassName('container footer');
+console.log(footerContainer[0]);
+
+
+
+        
+                The "Query" Selectors
+
+        1] document.querySelector('cssSelector')
+
+ // Get ALL elements with the class 'container'
+const allContainers = document.querySelectorAll('.container');
+console.log(allContainers.length); // 2
+
+// Get ALL list items inside the element with the ID 'item-list'
+const listItems = document.querySelectorAll('#item-list li');
+
+// A NodeList has a .forEach method, which is very convenient!
+listItems.forEach(item => {
+  item.style.fontWeight = 'bold';
+});
+
+
+        3] document.querySelectorAll('cssSelector')
+
+// Get ALL elements with the class 'container'
+const allContainers = document.querySelectorAll('.container');
+console.log(allContainers.length); // 2
+
+// Get ALL list items inside the element with the ID 'item-list'
+const listItems = document.querySelectorAll('#item-list li');
+
+// A NodeList has a .forEach method, which is very convenient!
+listItems.forEach(item => {
+  item.style.fontWeight = 'bold';
+});
+
+
+        3] Other, More Niche Selections
+      
+const loginForm = document.getElementsByName('login-form');
+const usernameInputByName = document.getElementsByName('username'); -->

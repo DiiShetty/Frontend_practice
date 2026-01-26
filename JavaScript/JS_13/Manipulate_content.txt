@@ -1,0 +1,126 @@
+Properties for Manipulating Content
+
+        1] .textContent (The Safe and Recommended Choice)
+
+When Reading:
+const desc = document.getElementById('description');
+console.log(desc.textContent);
+// Output: "These headphones have noise-cancelling features."
+// Notice the <strong> tags are gone.
+
+const productName = document.getElementById('product-name');
+console.log(productName.textContent);
+// Output: "Smart Headphones SALE"
+// It includes text from hidden elements but ignores comments.
+
+
+When Writing (Safe):
+const desc = document.getElementById('description');
+
+// Let's try to inject some HTML
+desc.textContent = "Click <a href='#'>here</a> to win!";
+
+// The browser will display the literal text, not a clickable link:
+// "Click <a href='#'>here</a> to win!"
+
+
+
+        2] .innerHTML (The Powerful but Dangerous Choice)
+When Reading:
+const desc = document.getElementById('description');
+console.log(desc.innerHTML);
+// Output: "These headphones have <strong>noise-cancelling</strong> features."
+// It includes the HTML tags as a string.
+
+When Writing (Dangerous) :
+const desc = document.getElementById('description');
+
+// This is powerful and useful for creating new elements.
+desc.innerHTML = "Updated features: <strong>Active Noise Cancelling</strong> and <em>Bluetooth 5.0</em>.";
+// The browser will correctly render the bold and italic text.
+
+// SECURITY RISK: What if the string comes from a malicious user?
+let userInput = `<img src="x" onerror="alert('You have been hacked!')">`;
+// desc.innerHTML = userInput; // This would execute the malicious script!
+
+
+
+        3] .innerText (The "Smart" but Tricky Choice)
+
+When Reading:
+const productName = document.getElementById('product-name');
+console.log(productName.innerText);
+// Output: "SMART HEADPHONES" (if CSS `text-transform: uppercase` was applied)
+// It will NOT include the text from the hidden <span> ("SALE").
+
+
+
+**Summary of Content Properties:**
+
+Property	HTMLContent	    CSS Aware	Speed	    Security (on write)
+.textContent	No	        No	        Fastest	    Safe
+.innerHTML	    Yes	        No	        Slower	    Dangerous
+.innerText	    No	        Yes	        Slowest	    Safe
+
+
+
+
+
+
+ #  # Properties for Manipulating Attributes
+
+        1].id and .className (Direct Properties)
+
+const card = document.getElementById('product-card');
+console.log(card.id); // "product-card"
+card.id = 'new-card-id'; // Changes the element's ID
+
+
+console.log(card.className); // "card featured"
+
+// This will OVERWRITE all existing classes.
+card.className = "card-dark-mode";
+// The element now only has the class "card-dark-mode". "featured" is gone.
+
+
+
+        2] .classList (The Modern Way to Handle Classes)
+
+const card = document.getElementById('product-card');
+
+card.classList.add('in-cart');      // Adds 'in-cart'
+card.classList.remove('featured'); // Removes 'featured'
+
+// Toggle a 'selected' class every time a function is called
+card.classList.toggle('selected');
+
+if (card.classList.contains('in-cart')) {
+  console.log("This item is in the cart.");
+}
+
+
+
+        3] .getAttribute() and .setAttribute() (For Any Attribute)
+
+const card = document.getElementById('product-card');
+
+// Add a custom data attribute
+card.setAttribute('data-product-id', 'xyz-123');
+
+// Get the value of an attribute
+const productId = card.getAttribute('data-product-id');
+console.log(productId); // "xyz-123"
+
+// Remove an attribute
+card.removeAttribute('class');
+
+
+        4]  The .style Property
+
+
+        const title = document.querySelector('.title');
+
+title.style.color = 'blue';
+title.style.backgroundColor = '#f0f0f0'; // Note the camelCase
+title.style.fontSize = '24px'; // The value must be a string
+title.style.padding = '10px';
